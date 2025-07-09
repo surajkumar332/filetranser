@@ -1,7 +1,10 @@
+*{
+  box-sizing: border-box ;
+}
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5; /* light background for contrast */
+  background: #f0f2f5; 
 }
 
 .containar {
@@ -18,6 +21,7 @@ body {
   padding: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+  /* animation: ; */
 
 }
 .section1 h2{
@@ -48,7 +52,6 @@ body {
     position: relative;
     left: 25vw;
 }
-
 /* Optional: Button styling */
 button {
   background-color: #4a6cf7;
@@ -65,8 +68,10 @@ button {
 button:hover {
   background-color: #3c5de0;
 }
+.section1 #cl, #cpy{
+  position: relative;
+}
 
-/* Link styling */
 a {
   color: #4a6cf7;
   text-decoration: none;
@@ -84,4 +89,46 @@ a:hover {
 }
 .section3, .section4 {
   text-align: center;
+}
+.utd{
+
+  animation: upToDown 2s ease forwards;
+}
+.rtl{
+  animation: rightToLeft 2s ease-in-out forwards; 
+}
+.ltr{
+  animation:leftToRight 2s ease-in-out forwards;
+}
+@keyframes upToDown{
+  
+  from{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+@keyframes rightToLeft{
+  from{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+@keyframes leftToRight{
+   from{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section1 h2 {
+    font-size: 40px;
+  }
+  .section1 p, .section1 h4 {
+    font-size: 20px;
+  }
+  .section1 ul li, .section1 button,
+  .section2 button, .section2 #reset {
+    left: 0;
+  }
 }

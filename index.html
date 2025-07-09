@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,50 +9,51 @@
     <link rel="icon" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
-   <div class="containar">
-    <div class="section1">
-        <h2>File Transfer</h2>
-        <p>Transfer file with friends to quick ways</p>
-        <h4>HOW TO USE</h4>
-        <ul>
-            <li>Upload The Photo, Video, File </li>
-            <li>Click On Create Link</li>
-            <li>Copy Link</li>
-            <li>Click on Share Link Button</li>
-        </ul>
-        <button id="cl">Create Link</button>
-        <button id="cpy">Copy Link</button>
-        
-    </div>
-    <div class="section2">
-        <button id="photo" onclick="document.getElementById('imageInput').click()"><i class="fa-solid fa-image"></i>Photos
-        <input type="file" accept="image/*" id="imageInput" style="display: none;"> </button>
-        
-        <button id="video" onclick="document.getElementById('videoInput').click()"><i class="fa-solid fa-video"></i>Videos
-        <input type="file" id="videoInput" accept="video/*" style="display: none;"> </button>
-        
-        <!-- <button id="music" onclick="document.getELementById('musicInput').click()"><i class="fa-solid fa-music"></i>Music
-        <input type="file" id="musicInput" accept="audio/*" style="display: none;"></button>-->
+    <div class="containar">
+        <div class="section1 utd">
+            <h2 class="utd">File Transfer</h2>
+            <p class="utd">Transfer file with friends to quick ways</p>
+            <h4 class="rtl">HOW TO USE</h4>
+            <ul class="ltr">
+                <li>Upload The Photo, Video, File </li>
+                <li>Click On Create Link</li>
+                <li>Copy Link</li>
+                <li>Click on Share Link Button</li>
+            </ul>
+            <button id="cl" class="ltr">Create Link</button>
+            <button id="cpy" class="rtl">Copy Link</button>
 
-        <button id="file" onclick="document.getElementById('fileInput').click()"><i class="fa-solid fa-file"></i>File 
-        <input type="file" id="fileInput" accept="file/*" style="display: none;"></button>
+        </div>
+        <div class="section2 ltr">
+            <button id="photo" onclick="document.getElementById('imageInput').click()"><i
+                    class="fa-solid fa-image"></i>Photos
+                <input type="file" accept="image/*" id="imageInput" style="display: none;"> </button>
 
-        <p id="status" style="font-size: 20px;"></p>
-        <p id="link"></p>
-        <button id="reset" onclick="rt()">reset</button>
+            <button id="video" onclick="document.getElementById('videoInput').click()"><i
+                    class="fa-solid fa-video"></i>Videos
+                <input type="file" id="videoInput" accept="video/*" style="display: none;"> </button>
+
+            <button id="file" onclick="document.getElementById('fileInput').click()"><i
+                    class="fa-solid fa-file"></i>File
+                <input type="file" id="fileInput" accept="file/*" style="display: none;"></button>
+
+            <p id="status" style="font-size: 20px;"></p>
+            <p id="link"></p>
+            <button id="reset" onclick="rt()">reset</button>
+        </div>
+        <div class="section3 rtl">
+            <h3>Add Your Frineds</h3>
+            <button id="add" onclick="navigator.share({ url: window.location.href })">Share Link</button>
+
+        </div>
+        <div class="section4 ltr">
+            <h3>Web Share</h3>
+            <p>Now Easy Way to Transfer files with browser</p>
+        </div>
     </div>
-    <div class="section3">
-        <h3>Add Your Frineds</h3>
-        <button id="add" onclick="navigator.share({ url: window.location.href })">Share Link</button>
-       
-    </div>
-    <div class="section4">
-        <h3>Web Share</h3>
-        <p>Now Easy Way to Transfer files with browser</p>
-    </div>
-   </div>
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
 
+</html>
