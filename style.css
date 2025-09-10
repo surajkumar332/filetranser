@@ -16,20 +16,18 @@ body {
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
-  /* background: #f9f9f9; */
-  /* border: 2px solid #e0e0e0; */
   padding: 10px 20px;
-  margin: -20px;
+  margin: 0;
   font-weight: 600;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   font-size: 20px;
   border-radius: 14px;
   margin-bottom: 0px;
+  margin-top: 5px;
   cursor: pointer;
 
 }
 
-.containar {
+.container {
   max-width: 100%;
   width: 100%;
   margin: 0;
@@ -92,10 +90,7 @@ button:hover {
   background-color: #3c5de0;
 }
 
-.section1 #cl,
-#cpy {
-  position: relative;
-}
+
 
 a {
   color: #4a6cf7;
@@ -163,7 +158,9 @@ a {
   align-items: center;
   width: 40%;
 }
-.section2 #clear:active, #cl:active, #cpy:active{
+.section2 #clear:active,
+.section2 #cl:active,
+.section2 #cpy:active{
   background-color: #6b7280;
   transform: scale(0.95);
 }
@@ -292,12 +289,7 @@ a {
     gap: 10px;
     align-items: center;
   }
-  .section2 .flxbtn{
-    gap: 40px;
-    width: 80%;
-    height: 80px;
-    font-size: 15px;
-  }
+
   .section4 .leftright {
     flex-direction: column;
     align-items: center;
