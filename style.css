@@ -1,62 +1,85 @@
-*{
-  box-sizing: border-box ;
+* {
+  box-sizing: border-box;
+
 }
+
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5; 
+  background: #f0f2f5;
+  /* overflow-x: hidden; */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  /* background: #f9f9f9; */
+  /* border: 2px solid #e0e0e0; */
+  padding: 10px 20px;
+  margin: -20px;
+  font-weight: 600;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  font-size: 20px;
+  border-radius: 14px;
+  margin-bottom: 0px;
+  cursor: pointer;
+
 }
 
 .containar {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   display: grid;
   gap: 20px;
 }
 
-.section1,.section2,.section3,.section4 {
-  background: linear-gradient(135deg, #ffffff, #f1f3f6);
+
+.section1 {
   border-radius: 16px;
   padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* background: #ffffff; */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
   transition: transform 0.2s ease;
-  /* animation: ; */
+  display: flex;
+  height: fit-content;
+  width: 100%;
 
 }
-.section1 h2{
-    font-size: 70px;
-    text-align: center;
-    transition: transform 3s ease-in-out 2s;
+
+.section1 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 20px; */
+  width: 70%;
+}
+
+.section1 h1 {
+  font-size: 70px;
+  text-align: center;
+  transition: transform 3s ease-in-out 2s;
 
 }
-.section1 :active{
-   position: relative;
-   top: 30px;
+
+.section1 p {
+  font-size: 30px;
+  text-align: center;
+  width: 60%;
+
 }
-.section1 p{
-    font-size: 30px;
-    text-align: center;
-    
-}
-.section1 h4{
-    font-size: 30px;
-    color: green;
-    text-align: center;
-}
-.section1 ul li{
-    position: relative;
-    left: 23vw;
-    }
-.section1 button{
-    position: relative;
-    left: 25vw;
-}
+
 /* Optional: Button styling */
 button {
   background-color: #4a6cf7;
   color: white;
-  padding: 10px 16px;
+  padding: 12px 24px;
+  font-size: 16px;
   border: none;
   border-radius: 8px;
   font-size: 15px;
@@ -68,7 +91,9 @@ button {
 button:hover {
   background-color: #3c5de0;
 }
-.section1 #cl, #cpy{
+
+.section1 #cl,
+#cpy {
   position: relative;
 }
 
@@ -76,59 +101,225 @@ a {
   color: #4a6cf7;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+
+.section1 .image img {
+  width: 100%;
+  border-radius: 16px;
 }
-.section2 button{
+
+/* section 2 */
+
+.section2 {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  height: fit-content;
+  padding-bottom: 20px;
+  /* background: linear-gradient(135deg,  #ffffff, #f1f3f6,); */
+}
+
+.section2 h4 {
+  font-size: 50px;
+  text-align: center;
   position: relative;
-  left: 22vw;
+  top: -30px;
 }
-.section2 #reset{
+
+.section2 ol li {
   position: relative;
-  left: 30vw;
+  left: 23vw;
+  top: -50px;
+  font-size: 17px;
+  color: #6b7280;
 }
-.section3, .section4 {
+
+.section2 .box button {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 100px;
+  background: rgb(238, 236, 236);
+  Border: 2px dashed #2563eb;
+  color: #2563eb;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 12px;
   text-align: center;
 }
-.utd{
+
+.section2 #clear, #cl, #cpy {
+  display: flex;
+  margin: 0 auto ;
+  height: auto;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: #4a6cf7;
+}
+.section2 .flxbtn{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.section2 #clear:active, #cl:active, #cpy:active{
+  background-color: #6b7280;
+  transform: scale(0.95);
+}
+.section2 p{
+  text-align: center;
+  font-size: 15px;
+}
+
+.section3,
+.section4 {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+.section4 .txt h1{
+  font-size: 40px;
+}
+.section4 .txt p{
+  font-size: 30px;
+}
+.section4 .leftright{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.section4 .leftright .left {
+  width: 60%;
+  border-radius: 16px;
+}
+.section4 .leftright .left img {
+  width: 100%;
+  border-radius: 16px;
+  height: 100%;
+}
+.section4 .leftright .right{
+  width: 40%;
+}
+.section4 .leftright .right .text p{
+  text-align: justify;
+  font-size: 20px;
+}
+.section4 .leftright .right .list ul li{
+  font-size: 20px;
+  text-align: justify;
+  margin: 10px 0;
+}
+
+/* .utd {
 
   animation: upToDown 2s ease forwards;
 }
-.rtl{
-  animation: rightToLeft 2s ease-in-out forwards; 
+
+.rtl {
+  animation: rightToLeft 2s ease-in-out forwards;
 }
-.ltr{
-  animation:leftToRight 2s ease-in-out forwards;
-}
-@keyframes upToDown{
-  
-  from{
+
+.ltr {
+  animation: leftToRight 2s ease-in-out forwards;
+} */
+
+@keyframes upToDown {
+
+  from {
     transform: translateY(-100px);
     opacity: 0;
   }
 }
-@keyframes rightToLeft{
-  from{
+
+@keyframes rightToLeft {
+  from {
     transform: translateX(100px);
     opacity: 0;
   }
 }
-@keyframes leftToRight{
-   from{
+
+@keyframes leftToRight {
+  from {
     transform: translateX(-100px);
     opacity: 0;
   }
 }
 
+
+.section3,
+.section4 {
+  /* background: linear-gradient(135deg, #ffffff, #f1f3f6); */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  max-height: 100vh;
+
+}
+
 @media (max-width: 768px) {
-  .section1 h2 {
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .conatiner {
+    grid-template-columns: 1fr;
+  }
+
+  .section1 h1 {
     font-size: 40px;
   }
-  .section1 p, .section1 h4 {
+
+  .section1 p,
+  .section1 h4 {
     font-size: 20px;
   }
-  .section1 ul li, .section1 button,
-  .section2 button, .section2 #reset {
+
+  .section1 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .section2 {
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+  }
+  .section2 .flxbtn{
+    gap: 40px;
+    width: 80%;
+    height: 80px;
+    font-size: 15px;
+  }
+  .section4 .leftright {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+    height: auto;
+  }
+  .section4 .leftright .left, .section4 .leftright .right {
+    width: 100%;
+    font-size: 30px;
+    height: auto;
+  }
+  .section2 .flxbtn{
+    width: 40%;
+    height: 90px;
+    font-size: 15px;
+  }
+  .section1 ul li,
+  .section1 button,
+  .section2 button,
+  .section2 #reset {
     left: 0;
   }
 }

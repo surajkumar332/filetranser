@@ -32,9 +32,10 @@ fileInput.addEventListener('change', function () {
     }
 });
 
-// Reset function
-function rt() {
-    status.textContent = "";
+// clear function
+function clear() {
+    // status.textContent = "";
+    status.innerHTML = "";
     link.textContent = "";
     selectedFile = null;
     imageInput.value = "";
@@ -45,7 +46,7 @@ function rt() {
 // Create Link button functionality (GoFile API)
 createLinkBtn.addEventListener('click', async function () {
     if (!selectedFile) {
-        status.textContent = "Please select a file first!";
+        status.textContent = "Please select a Photo/Video/file first!";
         return;
     }
 
@@ -77,7 +78,7 @@ createLinkBtn.addEventListener('click', async function () {
 // Copy Link button functionality
 copyBtn.addEventListener('click', function () {
     if (link.textContent === "") {
-        alert("No link to copy!");
+        status.innerHTML = "No link to copy!";
         return;
     }
 
@@ -88,4 +89,26 @@ copyBtn.addEventListener('click', function () {
     document.execCommand("copy");
     document.body.removeChild(tempInput);
     alert("Link copied to clipboard!");
+});
+
+
+// dark mode toggle
+
+let modebtn = document.querySelector("#mode");
+let currMode = "light"; // string me likhna zaroori hai
+
+modebtn.addEventListener("click", () => {
+  if (currMode === "light") {
+    document.body.style.backgroundColor = "black";
+    document.body.style.transition = "all 0.5s ease-in-out";
+    document.body.style.color = "white";
+    // document.section2 .box .buttons.style.backgroundColor = "black";
+
+    currMode = "dark";
+  } else {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+    document.body.style.transition = "all 0.5s ease-in-out";
+    currMode = "light";
+  }
 });

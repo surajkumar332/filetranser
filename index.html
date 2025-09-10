@@ -6,51 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>file transfer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="">
+    <link rel="icon" href="img/FileTransferLogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
     <div class="containar">
-        <div class="section1 utd">
-            <h2 class="utd">File Transfer</h2>
-            <p class="utd">Transfer file with friends to quick ways</p>
-            <h4 class="rtl">HOW TO USE</h4>
-            <ul class="ltr">
-                <li>Upload The Photo, Video, File </li>
-                <li>Click On Create Link</li>
-                <li>Copy Link</li>
-                <li>Click on Share Link Button</li>
+        <div class="navbar">
+            <ul>
+               <a href="index.html"> <img src="img/FileTransferLogo.png" alt="Logo" srcset="" width="70px" height="70px"
+                    style="border-radius: 16px;"></a>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#upload"> Upload</a></li>
+                <li><a href="#myfile">My Files</a> </li>
+                <li><a href="#about">About</a> </li>
+                <li><a href="#contact">Contact</a> </li>
+                <li><button>Sign In</button></li>
+                <!-- <i class="fa-solid fa-sun" id="mode"></i> -->
+                 <button id="mode">Mode</button>
             </ul>
-            <button id="cl" class="ltr">Create Link</button>
-            <button id="cpy" class="rtl">Copy Link</button>
+        </div>
+        <div class="section1" id="home">
+            <div class="text">
+                <h1 class="utd">Fast & Secure File Transfer</h1>
+                <p class="utd">Upload your files and share them instantly with anyone, anywhere</p>
+                <div class="btn">
+                    <button>Get Started</button>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/homepage.jpg" alt="" height="90%" width="100%">
+            </div>
+
 
         </div>
-        <div class="section2 ltr">
-            <button id="photo" onclick="document.getElementById('imageInput').click()"><i
-                    class="fa-solid fa-image"></i>Photos
-                <input type="file" accept="image/*" id="imageInput" style="display: none;"> </button>
+        <div class="section2 ltr" id="upload">
+            <h4 class="rtl">Upload & Share Instantly</h4>
+            <ol class="ltr">
+                <li>Upload The Photo, Video, File 📂</li>
+                <li>Click On Create Link 🔗</li>
+                <li>Copy Link 🔗</li>
+                <li>Click on Share Link Button📱</li>
+            </ol>
 
-            <button id="video" onclick="document.getElementById('videoInput').click()"><i
-                    class="fa-solid fa-video"></i>Videos
-                <input type="file" id="videoInput" accept="video/*" style="display: none;"> </button>
 
-            <button id="file" onclick="document.getElementById('fileInput').click()"><i
-                    class="fa-solid fa-file"></i>File
-                <input type="file" id="fileInput" accept="file/*" style="display: none;"></button>
+            <div class="box">
+                <button id="photo" onclick="document.getElementById('imageInput').click()"><i
+                        class="fa-solid fa-image"></i>Photos
+                    <input type="file" accept="image/*" id="imageInput" style="display: none;"> </button>
 
-            <p id="status" style="font-size: 20px;"></p>
-            <p id="link"></p>
-            <button id="reset" onclick="rt()">reset</button>
+                <button id="video" onclick="document.getElementById('videoInput').click()"><i
+                        class="fa-solid fa-video"></i>Videos
+                    <input type="file" id="videoInput" accept="video/*" style="display: none;"> </button>
+
+                <button id="file" onclick="document.getElementById('fileInput').click()"><i
+                        class="fa-solid fa-file"></i>File
+                    <input type="file" id="fileInput" accept="file/* && mp3/*" style="display: none;"></button>
+
+                <p id="status" style="font-size: 20px;" onclick="clear()"></p>
+                <p id="link"></p>
+            </div>
+            <div class="flxbtn">
+                <button id="cl" class="ltr">Create Link</button>
+                <button id="cpy" class="rtl">Copy Link</button>
+                <button id="clear" onclick="clear()">Clear</button>
+            </div>
         </div>
-        <div class="section3 rtl">
-            <h3>Add Your Frineds</h3>
-            <button id="add" onclick="navigator.share({ url: window.location.href })">Share Link</button>
+        <div class="section3 rtl" id="myfile">
+            
+        <div class="section4 ltr" id="about">
+            <div class="txt">
+                <h1>About FileTransfer</h1>
+                <p>A modern platform to share files seamlessly with speed and security.</p>
+            </div>
+            <div class="leftright">
+                <div class="left">
+                    <img src="img/sharingfile.jpg" alt="" height="100%" width="100%">
+                </div>
+
+
+                <div class="right">
+                    <div class="text">
+                        <p>FileTransfer is built to make file sharing easier, faster, and safer for everyone. Whether
+                            you're
+                            sending documents, images, or videos, our platform ensures smooth uploads and secure sharing
+                            across
+                            devices. With advanced encryption, responsive design, and cross-platform compatibility, you
+                            can
+                            rely
+                            on us for professional and personal use.</p>
+                        <div class="list">
+                            <ul style="list-style-type: none;">
+                                <li>🚀 Fast & Reliable</li>
+                                <li>🔒 Secure & Private</li>
+                                <li>🌍 Works Everywhere</li>
+                                <li>📂 Large File Support</li>
+                                <li>🔗 Easy Sharing</li>
+                                <li>🆓 Free to Start</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section5" id="Contact">
+            <div class="leftright">
+            <h2>Get in Touch</h2>
+            <p>We love to hear from you. Send us a message and we'll get back soon</p>
+            </div>
+            
 
         </div>
-        <div class="section4 ltr">
-            <h3>Web Share</h3>
-            <p>Now Easy Way to Transfer files with browser</p>
         </div>
     </div>
     <script src="script.js"></script>
