@@ -95,20 +95,22 @@ copyBtn.addEventListener('click', function () {
 // dark mode toggle
 
 let modebtn = document.querySelector("#mode");
-let currMode = "light"; // string me likhna zaroori hai
+let currMode = "light"; 
 
 modebtn.addEventListener("click", () => {
   if (currMode === "light") {
     document.body.style.backgroundColor = "black";
-    document.body.style.transition = "all 0.5s ease-in-out";
+    document.body.style.transition = "all 2s ease-in-out";
     document.body.style.color = "white";
-    // document.section2 .box .buttons.style.backgroundColor = "black";
-
+    modebtn.classList.remove("fa-sun");
+    modebtn.classList.add("fa-moon");
     currMode = "dark";
   } else {
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
-    document.body.style.transition = "all 0.5s ease-in-out";
+    document.body.style.transition = "all 2s ease-in-out";
+    modebtn.classList.remove("fa-moon");
+    modebtn.classList.add("fa-sun");
     currMode = "light";
   }
 });
