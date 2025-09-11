@@ -33,6 +33,10 @@ body {
   background-color: #2563eb;
   width: fit-content;
 }
+.navbar button:active{
+  background-color: #6b7280;
+  transform: scale(0.95);
+}
 
 .container {
   max-width: 100%;
@@ -93,8 +97,9 @@ button {
   margin: 5px 8px 5px 0;
 }
 
-button:hover {
-  background-color: #3c5de0;
+button:active {
+  background-color: #6b7280;
+  transform: scale(0.95);
 }
 
 
@@ -135,7 +140,6 @@ a {
   font-size: 17px;
   color: #6b7280;
   position: relative;
-  bottom: 30px;
   text-align: justify;
 }
 
@@ -188,28 +192,60 @@ a {
   text-align: center;
   font-size: 15px;
 }
-.section3 {
+
+.section3  h1{
+  font-size: 40px;
   text-align: center;
-  min-height: fit-content;
-  height: auto;
+  margin-bottom: 10px;
+
+}
+.section3 p{
+  font-size: 30px;
+  text-align: center;
+  color: #6b7280;
 }
 .section3 .myfilebox{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
-.section4 {
+.section3 .myfilebox table{
+  width: 80%;
   text-align: center;
-  min-height: 100vh;
+  border-collapse: collapse;
+}
+.section3 .myfilebox table button{
+  cursor: pointer;
+  width: fit-content;
+  font-size: 15px;
+  display: flex;
+
+}
+.section3 .myfilebox table button:active{
+  background-color: #6b7280;
+  transform: scale(0.95);
+} 
+.section3,
+.section4 {
+  /* background: linear-gradient(135deg, #ffffff, #f1f3f6); */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
   height: auto;
+
 }
 
 .section4 .txt h1 {
   font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .section4 .txt p {
   font-size: 30px;
+  text-align: center;
+  color: #6b7280;
 }
 
 .section4 .leftright {
@@ -262,15 +298,18 @@ a {
   color: #6b7280;
 }
 .section5 .form{
-  display: flex;
+  text-align: center;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
-  position: relative;
-  left: 15%;
+  width: 60%;
+  margin: 0 auto;
 
+}
+.section5 button:active{
+  background-color: #6b7280;
+  transform: scale(0.95);
 }
 .section5 .form input, .section5 .form textarea, button{
   width: 50%;
@@ -280,53 +319,21 @@ a {
   border: 1px solid #ccc;
   font-size: 16px;
 }
-
-/* .utd {
-
-  animation: upToDown 2s ease forwards;
+.footer{
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+  color: #6b7280;
+  background: black;
+  font-size: 20px;
 }
-
-.rtl {
-  animation: rightToLeft 2s ease-in-out forwards;
-}
-
-.ltr {
-  animation: leftToRight 2s ease-in-out forwards;
-} */
-
-@keyframes upToDown {
-
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-}
-
-@keyframes rightToLeft {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-}
-
-@keyframes leftToRight {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-}
-
-
-.section3,
-.section4 {
-  /* background: linear-gradient(135deg, #ffffff, #f1f3f6); */
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
-  max-height: 100vh;
+.footer .social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 
 }
-
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -377,16 +384,14 @@ a {
     height: auto;
     width: 100%;
     justify-content: center;
-    align-items: center;
     display: flex;
-    height: fit-content;
   }
 
   .section4 .leftright .left,
   .section4 .leftright .right {
     width: 100%;
     font-size: 30px;
-    height: auto;
+    height: fit-content;
   }
 
   .section2 .flxbtn {
@@ -401,10 +406,10 @@ a {
     padding: 10px;
   }
   .section5 .form {
-    left: 0;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   }
 }
