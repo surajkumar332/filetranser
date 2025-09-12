@@ -84,7 +84,7 @@ body {
 }
 
 /* Optional: Button styling */
-button {
+.section1 button{
   background-color: #4a6cf7;
   color: white;
   padding: 12px 24px;
@@ -220,7 +220,7 @@ a {
   width: fit-content;
   font-size: 15px;
   display: flex;
-
+  background-color: #4a6cf7;
 }
 .section3 .myfilebox table button:active{
   background-color: #6b7280;
