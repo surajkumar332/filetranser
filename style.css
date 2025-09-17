@@ -12,7 +12,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
 .navbar ul {
   display: flex;
   justify-content: space-around;
@@ -28,12 +27,14 @@ body {
   cursor: pointer;
 
 }
-.navbar button{
+
+.navbar button {
   font-size: 20px;
   background-color: #2563eb;
   width: fit-content;
 }
-.navbar button:active{
+
+.navbar button:active {
   background-color: #6b7280;
   transform: scale(0.95);
 }
@@ -84,9 +85,10 @@ body {
 }
 
 /* Optional: Button styling */
-.section1 button{
+.section1 button {
   background-color: #4a6cf7;
   color: white;
+  font-weight: 600;
   padding: 12px 24px;
   font-size: 16px;
   border: none;
@@ -141,6 +143,7 @@ a {
   color: #6b7280;
   position: relative;
   text-align: justify;
+  bottom: 20px;
 }
 
 .section2 .box button {
@@ -193,39 +196,45 @@ a {
   font-size: 15px;
 }
 
-.section3  h1{
+.section3 h1 {
   font-size: 40px;
   text-align: center;
   margin-bottom: 10px;
 
 }
-.section3 p{
+
+.section3 p {
   font-size: 30px;
   text-align: center;
   color: #6b7280;
 }
-.section3 .myfilebox{
+
+.section3 .myfilebox {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
-.section3 .myfilebox table{
+
+.section3 .myfilebox table {
   width: 80%;
   text-align: center;
   border-collapse: collapse;
 }
-.section3 .myfilebox table button{
+
+.section3 .myfilebox table button {
   cursor: pointer;
   width: fit-content;
   font-size: 15px;
   display: flex;
   background-color: #4a6cf7;
 }
-.section3 .myfilebox table button:active{
+
+.section3 .myfilebox table button:active {
   background-color: #6b7280;
   transform: scale(0.95);
-} 
+}
+
 .section3,
 .section4 {
   /* background: linear-gradient(135deg, #ffffff, #f1f3f6); */
@@ -280,24 +289,28 @@ a {
   margin: 10px 0;
 }
 
-.section5{
+.section5 {
   height: auto;
   padding: 20px;
   width: 100%;
 }
-.section5 .toptext{
+
+.section5 .toptext {
   text-align: center;
   margin-top: 20px;
 
 }
-.section5 .toptext h2{
+
+.section5 .toptext h2 {
   font-size: 40px;
 }
-.section5 .toptext p{
+
+.section5 .toptext p {
   font-size: 20px;
   color: #6b7280;
 }
-.section5 .form{
+
+.section5 .form {
   text-align: center;
   justify-content: center;
   flex-direction: column;
@@ -307,11 +320,15 @@ a {
   margin: 0 auto;
 
 }
-.section5 button:active{
+
+.section5 button:active {
   background-color: #6b7280;
   transform: scale(0.95);
 }
-.section5 .form input, .section5 .form textarea, button{
+
+.section5 .form input,
+.section5 .form textarea,
+button {
   width: 50%;
   padding: 15px;
   margin: 10px 0;
@@ -319,7 +336,8 @@ a {
   border: 1px solid #ccc;
   font-size: 16px;
 }
-.footer{
+
+.footer {
   text-align: center;
   padding: 20px;
   font-size: 15px;
@@ -327,19 +345,21 @@ a {
   background: black;
   font-size: 20px;
 }
-.footer .social{
+
+.footer .social {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 
 }
+
 @media (max-width: 768px) {
+
   .navbar ul {
     flex-direction: column;
     gap: 10px;
     width: 100%;
-
   }
 
   .container {
@@ -405,11 +425,12 @@ a {
   .section4 {
     padding: 10px;
   }
+
   .section5 .form {
-  left: 0;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
