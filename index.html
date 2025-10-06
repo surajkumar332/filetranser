@@ -14,13 +14,14 @@
     <div class="container">
         <div class="navbar">
             <ul>
-                <a href="#home"> <img src="img/FileTransferLogo.png" alt="Logo" srcset="" width="70px" height="70px" style="border-radius: 16px;"></a>
+                <a href="#home"> <img src="img/FileTransferLogo.png" alt="Logo" srcset="" width="70px" height="70px"
+                        style="border-radius: 16px;"></a>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#upload"> Upload</a></li>
                 <li><a href="#myfile">My Files</a> </li>
                 <li><a href="#about">About</a> </li>
                 <li><a href="#contact">Contact</a> </li>
-                <li><button>Sign In</button></li>
+                <li><button><a href="signup.html">Profile</a></button></li>
                 <i class="fa-solid fa-sun" id="mode"></i>
                 <!-- <button id="mode">Mode</button> -->
             </ul>
@@ -34,7 +35,7 @@
             <div class="btn">
                 <button>Get Start</button>
                 <button>Learn More</button>
-                
+
             </div>
         </div>
         <div class="image">
@@ -65,13 +66,13 @@
                     class="fa-solid fa-file"></i>File
                 <input type="file" id="fileInput" accept="file/* && mp3/*" style="display: none;"></button>
 
-            <p id="status" style="font-size: 20px;" onclick="clear()"></p>
+            <p id="status" style="font-size: 20px;"></p>
             <p id="link"></p>
         </div>
         <div class="flxbtn">
             <button id="cl" class="ltr">Create Link</button>
             <button id="cpy" class="rtl">Copy Link</button>
-            <button id="clear" onclick="clear()">Clear</button>
+            <button id="clear" onclick="clearForm()">Clear</button>
         </div>
     </div>
     <div class="section3" id="myfile">
@@ -215,7 +216,7 @@
             </div> -->
     </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
