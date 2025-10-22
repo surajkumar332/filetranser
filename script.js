@@ -128,56 +128,6 @@ function myFunction() {
   }
 }
 
-// // Signup
-// const signupForm = document.getElementById("signupForm");
-// if(signupForm){
-//   signupForm.addEventListener("submit", async (e) => {
-//     e.preventDefault();
-//     const formData = {
-//       name: signupForm.name.value,
-//       email: signupForm.email.value,
-//       password: signupForm.password.value
-//     };
-//     const res = await fetch("http://localhost:5000/signup", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(formData)
-//     });
-//     const data = await res.json();
-//     alert(data.message);
-//     if(data.success){
-//       window.location.href = "login.html";
-//     }else{
-//       alert(data.message);
-//     }
-//     signupForm.reset();
-//   });
-// }
-
-// // Login
-//  const loginForm = document.getElementById("loginForm");
-//     loginForm.addEventListener("submit", async (e) => {
-//       e.preventDefault();
-//       const formData = {
-//         email: loginForm.email.value,
-//         password: loginForm.password.value
-//       };
-//       const res = await fetch("http://localhost:5000/login", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify(formData)
-//       });
-//       const data = await res.json();
-//       if(data.token){
-//         localStorage.setItem("token", data.token);
-//         alert(data.message);
-//         window.location.href = "index.html";
-//       } else {
-//         alert(data.message);
-//       }
-//       loginForm.reset();
-//     });
-
 // login + signup
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -218,11 +168,63 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await res.json();
       if (data.token) {
         localStorage.setItem("token", data.token);
-        alert(data.message);
+        // alert(data.message);
         window.location.href = "index.html";
       } else alert(data.message);
       loginForm.reset();
     });
   }
 });
+
+
+
+// history fetch and display
+document.addEventListener("DOMContentLoaded", async () => {
+  const historyBody = document.getElementById("file-history-body"); 
+  const token = localStorage.getItem("token");
+  if (!token) {
+    console.log("No token found, user might not be logged in.");
+    return;
+  }
+
+  try {
+    const res = await fetch("http://localhost:5000/history", {
+      headers: { "Authorization": `Bearer ${token}` }
+    });
+    const history = await res.json();
+    historyBody.innerHTML = "";
+    history.forEach(item => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+
+
+        <td>${item.action}</td>
+        <td>${new Date(item.createdAt).toLocaleString()}</td>
+        <td><button onclick="deleteHistory('${item._id}')">Delete</button></td>
+      `;
+      historyBody.appendChild(row);
+    });
+  } catch (err) {
+    console.error("Error fetching history:", err);
+  } 
+});
+async function deleteHistory(id) {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert("You must be logged in to delete history.");
+    return;
+  }
+  try {
+    const res = await fetch(`http://localhost:5000/history/${id}`, {
+      method: "DELETE",
+      headers: { "Authorization": `Bearer ${token}` }
+    });
+    const data = await res.json();
+    alert(data.message);
+    if (data.success) location.reload();
+  } catch (err) {
+    console.error("Error deleting history:", err);
+    alert("Failed to delete history.");
+  }
+}
 

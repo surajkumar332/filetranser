@@ -33,8 +33,8 @@
             <h1 class="utd">Fast & Secure File Transfer</h1>
             <p class="utd">Upload your files and share them instantly with anyone, anywhere</p>
             <div class="btn">
-                <button>Get Start</button>
-                <button>Learn More</button>
+                <a href="#upload"><button>Get Start</button></a>
+                <a href="#about"><button>Learn More</button></a>
 
             </div>
         </div>
@@ -79,77 +79,19 @@
         <h1>My Files</h1>
         <p>Manage and access your uploaded files easily.</p>
         <div class="myfilebox">
+
             <table>
                 <thead>
                     <tr>
-                        <th>Uploaded Files</th>
-                        <th>Size</th>
-                        <th>Date</th>
+                        <th>File Name</th>
+                        <th>Date & Time</th>
                         <th>Action</th>
                     </tr>
-
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>abc.jpg</td>
-                        <td>1.3 MB</td>
-                        <td>3/6/2025</td>
-                        <td><button>Download</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>abc.jpg</td>
-                        <td>1.3 MB</td>
-                        <td>3/6/2025</td>
-                        <td><button>Download</button></td>
-                        <td><button>Delete</button></td>
-
-                    </tr>
-                    <tr>
-                        <td>abc.jpg</td>
-                        <td>1.3 MB</td>
-                        <td>3/6/2025</td>
-                        <td><button>Download</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>abc.jpg</td>
-                        <td>1.3 MB</td>
-                        <td>3/6/2025</td>
-                        <td><button>Download</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>abc.jpg</td>
-                        <td>1.3 MB</td>
-                        <td>3/6/2025</td>
-                        <td><button>Download</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>abc.jpg</td>
-                        <td>1.3 MB</td>
-                        <td>3/6/2025</td>
-                        <td><button>Download</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>abc.jpg</td>
-                        <td>1.3 MB</td>
-                        <td>3/6/2025</td>
-                        <td><button>Download</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>abc.jpg</td>
-                        <td>1.3 MB</td>
-                        <td>3/6/2025</td>
-                        <td><button>Download</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-
-                </tbody>
+                <tbody id="file-history-body"></tbody>
             </table>
+
+
         </div>
     </div>
     <div class="section4 ltr" id="about">
@@ -205,7 +147,6 @@
         </div>
 
     </div>
-
     <div class="footer">
         <p>© 2025 FileTransfer. All rights reserved.</p>
         <!-- <div class="social">
@@ -214,7 +155,6 @@
                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div> -->
-    </div>
     </div>
     <script src="script.js" defer></script>
 </body>

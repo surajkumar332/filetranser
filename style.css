@@ -28,7 +28,15 @@ body {
 
 }
 
-.navbar ul li  button {
+.navbar ul li a:hover {
+  color: #6b7280;
+}
+
+.navbar ul li a:active {
+  color: #2563eb;
+}
+
+.navbar ul li button {
   font-size: 20px;
   font-weight: 600;
   border: 2px solid #cc0a51;
